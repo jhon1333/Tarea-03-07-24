@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferreteria Don Pepe | Home</title>
+    <link rel="icon" href="img/tuerca.png">
+    <link rel="stylesheet" href="css/index.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Varela+Round&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+<!----------------------------------------->
+    <table>
+        <tr class="partearriba">
+            <td style="text-align:left ;" class="titulo">
+                Ferreteria Don Pepe
+            </td>
+            <td style="text-align:right ;">
+                atención@ferreteriadonpepe.com
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" style="text-align:right ;">
+                <a href="https://www.instagram.com/ferreterias.pe/"> <img src="img/da1.png" alt="" width="60px"> </a>
+                <a href="https://www.facebook.com/groups/ferreteriasdelperu/?locale=es_LA"><img src="img/da2.png" alt="" width="60px"> </a>
+                <a href="https://www.instagram.com/ferreteriaspueyo/?hl=es-la"><img src="img/da3.png" alt="" width="60px"> </a>
+            </td> <!--COLSPAN ES PARA JUNTAS 2 COLUMNAS-->
+        </tr>
+
+        <tr>
+            <td colspan="2" style="text-align:right;">
+                <ul class="menu">
+                    <a href="index.html"><li>Home</li></a>
+                    <a href="nosotros.html"><li>Nosotros</li></a>
+                    <a href="productos.html"><li>Productos</li> </a>
+                    <a href="conctacto.html"><li>Contacto</li></a>
+                    <a href="presupuesto.html"><li>Presupuesto</li></a>
+                    <a href="login.html"><li>Login</li></a>
+                </ul>
+            </td>
+        </tr>
+    </table>
+
+    <!------------------------------------------------------------------------------>
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+        }
+        .cabecera {
+            background-color: #f0f0f0;
+            padding: 10px;
+        }
+        .cabecera img {
+            width: 100%;
+        }
+        .cuerpo {
+            display: flex;
+            flex: 1;
+            width: 75%;
+            margin: auto;
+        }
+        #barra {
+            width: 200px;
+            background-color: #3b6a94;
+            color: white;
+            padding: 15px;
+        }
+        #barra ul {
+            list-style: none;
+            padding: 0;
+        }
+        #barra ul li {
+            margin-bottom: 10px;
+        }
+        #barra ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        #barra ul li a:hover {
+            text-decoration: underline;
+        }
+        #contenido {
+            flex-grow: 1;
+            padding: 20px;
+            width: 50%;
+        }
+        .pag {
+            display: none;
+        }
+        .pag.active {
+            display: block;
+        }
+        .pie {
+            width: 100%;
+            background-color: #F2B33D;
+            color: rgb(68, 68, 68);
+            padding: 15px;
+            text-align: center;
+        }
+        </style>
+        </head>
+        <body>
+            
+        <div class="cuerpo">
+            <div id="barra">
+                <p style="text-align: center; margin-bottom: 30px;">Menú principal</p>
+                <ul>
+                    <li><a href="#" onclick="mostrarPag('pagina1')">Herramientas inalámbricas</a></li>
+                    <li><a href="#" onclick="mostrarPag('pagina2')">Equipos de protección personal</a></li>
+                    <li><a href="#" onclick="mostrarPag('pagina3')">Herramientas de medición</a></li>
+                    <li><a href="#" onclick="mostrarPag('pagina4')">Accesorios para Herramientas eléctricas</a></li>
+                    <li><a href="#" onclick="cerrar();">Cerrar sesión</a></li>
+                </ul>
+            </div>
+            <div id="contenido">
+                <div id="pagina1" class="pag active">
+                    <h1>Sección inalámbricas</h1>
+                    <p>Todo lo que necesitas para construir</p>
+                    <img src="img/he1.png" width="100%" alt="">
+                </div>
+                <div id="pagina2" class="pag">
+                    <h1>Sección de Equipos de protección personal</h1>
+                    <p>Todo lo que necesitas para cuidarte</p>
+                    <img src="img/he2.png" width="100%" alt="">
+                </div>
+                <div id="pagina3" class="pag">
+                    <h1>Sección Herramientas de medición</h1>
+                    <p>Todo lo que necesitas para medir</p>
+                    <img src="img/he3.png" width="100%" alt="">
+                </div>
+                <div id="pagina4" class="pag">
+                    <h1>Sección de Accesorios para Herramientas eléctricas</h1>
+                    <p>Todo lo que necesitas para tus Herramientas eléctricas</p>
+                    <img src="img/he4.png" width="100%" alt="">
+                </div>
+            </div>
+        </div>
+        
+        <div class="pie">
+            <div style="width: 100%;">
+                <div style="text-align: center;">
+                    Autor: Jhon Dennis Quispe<br>
+                    Instituto CERTUS | Carreras técnicas y Educación continua
+                </div>
+            </div>
+        </div>
+        
+        <script>
+        function mostrarPag(pageId) {
+            const pages = document.querySelectorAll('.pag');
+            for (let i = 0; i < pages.length; i++) {
+                const page = pages[i];
+                if (page.id === pageId) {
+                    page.classList.add('active');
+                } else {
+                    page.classList.remove('active');
+                }
+            }
+        }
+        
+        function cerrar() {
+            window.close();
+        }
+        </script>
+
+
+    
+</body>
+</html>

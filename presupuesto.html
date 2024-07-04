@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferreteria Don Pepe | Home</title>
+    <link rel="icon" href="img/tuerca.png">
+    <link rel="stylesheet" href="css/index.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Varela+Round&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+
+
+    <!-----------------------------------------ENCABEZADO--------------------------------------------------------------->
+    <table>
+        <tr class="partearriba">
+            <td style="text-align:left; font-size: 30px;" class="titulo">
+                Ferreteria Don Pepe
+            </td>
+            <td style="text-align:right ;">
+                atención@ferreteriadonpepe.com
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" style="text-align:right ;">
+                <a href="https://www.instagram.com/ferreterias.pe/"> <img src="img/da1.png" alt="" width="50px"> </a>
+                <a href="https://www.facebook.com/groups/ferreteriasdelperu/?locale=es_LA"><img src="img/da2.png" alt="" width="50px"> </a>
+                <a href="https://www.instagram.com/ferreteriaspueyo/?hl=es-la"><img src="img/da3.png" alt="" width="50px"> </a>
+            </td> <!--COLSPAN ES PARA JUNTAS 2 COLUMNAS-->
+        </tr>
+
+        <tr>
+            <td colspan="2" style="text-align:right;">
+                <ul class="menu">
+                    <a href="index.html"><li>Home</li></a>
+                    <a href="nosotros.html"><li>Nosotros</li></a>
+                    <a href="productos.html"><li>Productos</li> </a>
+                    <a href="conctacto.html"><li>Contacto</li></a>
+                    <a href="presupuesto.html"><li>Presupuesto</li></a>
+                    <a href="login.html"><li>Login</li></a>
+                </ul>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <img src="img/banner ferrteria.jpg" alt="" width="100%">
+            </td>
+        </tr>
+    </table>
+    <!-------------------------FIN ENCABEZADO---------------------------->
+</table>
+
+    <table>
+        <tr>
+            <td>Largo (m)</td>
+            <td><input type="text" id="txtlargo"></td>
+        </tr>
+        <tr>
+            <td>Ancho(m)</td>
+            <td><input type="text" id="txtancho"></td>
+        </tr>
+        <tr>
+            <td>Área (m2)</td>
+            <td><input type="text" id="txtarea" disabled></td>
+        </tr>
+        <tr>
+            <td>Distrito</td>
+            <td>
+                <select id="txtdistritos" onchange="mostrar();">
+                    <option value="1">Lima Cercado</option>
+                    <option value="2">La Victoria</option>
+                    <option value="3">Lince</option>
+                    <option value="4">Jesús María</option>
+                    <option value="5">Pueblo Libre</option>
+                </select>
+            </td>
+        <tr>
+            <td>Precio m2</td>
+            <td><input type="text" id="txtprecio" disabled></td>
+
+        </tr>
+
+        <tr>
+            <td>Valor S/</td>
+            <td><input type="text" id="textvalorS" disabled></td>
+        </tr>
+        <tr>
+            <td>Valor US</td>
+            <td><input type="text" id="txtvalorUS" disabled></td>
+        </tr>
+
+        <tr>
+            <td><button onclick="calcular();">Calcular</button></td>
+            <td><button onclick="limpiar();">Limpiar</button></td>
+        </tr>
+    </table>
+
+
+    <script>
+
+        function limpiar(){
+            document.getElementById("txtlargo").value=""
+            document.getElementById("txtancho").value=""
+            document.getElementById("txtarea").value=""
+            document.getElementById("txtdistritos").value=""
+            document.getElementById("txtprecio").value=""
+            document.getElementById("textvalorS").value=""
+            document.getElementById("txtvalorUS").value=""
+        }
+
+        function mostrar(){
+            let op=document.getElementById("txtdistritos").value;
+            
+            switch(op){
+                case "1":
+                    document.getElementById("txtprecio").value="450";
+                    break;
+                case "2":
+                    document.getElementById("txtprecio").value="550";
+                    break;
+                case "3":
+                    document.getElementById("txtprecio").value="650";
+                    break;
+                case "4":
+                    document.getElementById("txtprecio").value="670";
+                    break;
+                case "5":
+                    document.getElementById("txtprecio").value="750";
+                    break;
+                
+            }
+        }
+        function calcular(){
+            let largo= parseFloat(document.getElementById("txtlargo").value);
+            let ancho= parseFloat(document.getElementById("txtancho").value);
+            let precio=parseFloat(document.getElementById("txtprecio").value);
+
+
+            let areafinal= largo*ancho;
+
+            let valor=areafinal*precio;
+            
+
+            document.getElementById("txtarea").value=areafinal;
+            document.getElementById("textvalorS").value=valor;
+
+            
+            
+
+        }
+
+    </script>
+
+
+
+</body>
+</html>

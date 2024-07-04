@@ -1,0 +1,64 @@
+body{
+    background-color: #FFEEDB;
+    font-family:"Varela Round";
+}
+
+.partearriba td {
+    background-color: #F2B33D;
+    background-size: 60px;
+    font-size: 20px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+
+
+table{
+    margin: auto;
+    width: 75%;
+    margin-top: 0%;
+}
+
+h3{
+    text-align: center;
+    font-size: 22px;
+    font-family: 'BAUHS93.TTF';
+    color: rgb(212, 23, 23);
+}
+
+.titulo{
+    color: #034C8C;
+}
+
+.menu{
+    list-style:none;
+
+}
+
+.menu li {
+    text-decoration: none;
+    display: inline;
+    margin: 20px;
+}
+
+.menu a{
+    text-decoration:none;
+}
+
+/*---------*/
+.presenta1{
+    font-size: 20px;
+    text-align: center;
+    margin: auto;
+    padding: 0%;
+}
+
+img{
+    border-radius: 20px;
+}
+
+.somosperuanos td{
+    border: #034C8C, solid, 15px;
+    border-radius: 40px;
+
+}
